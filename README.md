@@ -30,4 +30,10 @@ into record objects.
 
 Various standards and conventions that LibrarySearch partially implements.
 
-[http://www.php-fig.org/bylaws/psr-naming-conventions/] PSR Naming Conventions
+[PSR Naming Conventions](http://www.php-fig.org/bylaws/psr-naming-conventions/)
+
+[PSR-1: Basic Coding Standard](http://www.php-fig.org/psr/psr-1/)
+
+[PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/)
+
+[Zend Recommended Project Directory Structure](http://framework.zend.com/manual/1.12/en/project-structure.project.html)
