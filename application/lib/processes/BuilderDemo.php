@@ -2,11 +2,13 @@
 
 class BuilderDemo extends AbstractBuilder implements BuilderInterface
 {
-    public function __construct(){}
+    public function __construct(RecordInterface $record)
+    {
+        $this->model = $record;
+    }
     
     public function buildModel($element=null)
     {
-        $this->model = new Record();
         $this->setElement($element);
         $this->buildTitle();
         $this->buildTopics();
