@@ -17,8 +17,8 @@ components:
 3. one element extractor
 4. one record builder
 
-The processes handle data access from remote systems and transformation within 
-the framework.
+The processes handle data access from remote systems and modeling data 
+into the record schema used by the framework.
 
 # Configuration
 
