@@ -1,6 +1,6 @@
 # LibrarySearch
 
-A mini-framework for merging library search results from multiple data 
+A mini-framework for merging search results from multiple, remote data 
 sources
 
 LibrarySearch runs "modules" which consist of: 
