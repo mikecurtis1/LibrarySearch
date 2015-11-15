@@ -18,7 +18,7 @@ components:
 4. one record builder
 
 The processes handle data access from remote systems and modeling data 
-into the record schema used by the framework.
+into record objects.
 
 # Configuration
 
