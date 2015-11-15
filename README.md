@@ -17,7 +17,7 @@ components:
 3. one element extractor
 4. one record builder
 
-The processes access data from remote systems and model it 
+These processes access data from remote systems and model it 
 into record objects.
 
 # Configuration
