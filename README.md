@@ -10,13 +10,15 @@ LibrarySearch runs "modules" which consist of:
 3. one HTML template 
 
 Each module runs one or more "processes" consisting of four 
-components which handle data access from remote systems 
-and transformation within the framework: 
+components: 
 
 1. one query interpreter
 2. one DAO (data access object)
 3. one element extractor
 4. one record builder
+
+The processes handle data access from remote systems and transformation within 
+the framework.
 
 # Configuration
 
