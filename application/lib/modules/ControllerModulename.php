@@ -4,8 +4,8 @@ class ControllerModulename extends Controller implements ControllerInterface
 {
     public function __construct(ConfigInterface $config, HTTPRequestInterface $http_request, ViewInterface $view)
     {
-        $this->results = new Results();
-        $this->search_info = new SearchInfo();
+        $this->results = SetFactory::build('Results', 'RecordInterface');
+        $this->search_info = SetFactory::build('SearchInfo', 'SearchInfoMemberInterface');
         $this->processRequest($config, $http_request);
         $this->invokeView($config, $http_request, $view);
     }

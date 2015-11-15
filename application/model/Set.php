@@ -1,12 +1,14 @@
 <?php 
 
-class Set implements Iterator
+class Set implements SetInterface, Iterator
 {
-    private $position = 0;
-    private $members = array();
+    protected $position = 0;
+    protected $member_implementation = '';
+    protected $members = array();
     
-    public function __construct()
+    protected function __construct($member_implementation)
     {
+        $this->member_implementation = $member_implementation;
         $this->position = 0;
     }
     
@@ -37,7 +39,15 @@ class Set implements Iterator
     
     public function addMember($member=null)
     {
-        $this->members[] = $member;
+        $member_added = false;
+        if (gettype($member) === 'object') {
+            if (in_array($this->member_implementation, class_implements($member))) {
+                $this->members[] = $member;
+                $member_added = true;
+            }
+        }
+        
+        return $member_added;
     }
     
     public function getMemberByKey($key=null)

@@ -60,7 +60,7 @@ class Controller
                 $elements = $extractor->getElements();
                 foreach ($elements as $n => $element) {
                     $builder->buildModel($element);
-                    if ($this->results->addResult($builder->getModel()) === false) {
+                    if ($this->results->addMember($builder->getModel()) === false) {
                         trigger_error('Could not add model to Results.', E_USER_ERROR);
                     }
                 }

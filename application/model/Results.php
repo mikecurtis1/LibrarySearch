@@ -1,53 +1,12 @@
 <?php 
 
-class Results implements Iterator, ResultsInterface
+class Results extends Set
 {
-    private $position = 0;
-    private $results = array();
-    
-    public function current()
-    {
-        return $this->results[$this->position];
-    }
-    
-    public function key()
-    {
-        return $this->position;
-    }
-    
-    public function next()
-    {
-        ++$this->position;
-    }
-    
-    public function rewind()
-    {
-        $this->position = 0;
-    }
-    
-    public function valid()
-    {
-        return isset($this->results[$this->position]);
-    }
-    
-    public function addResult($arg)
-    {
-        $result_added = false;
-        if (gettype($arg) === 'object') {
-            if (in_array('RecordInterface', class_implements($arg))) {
-                $this->results[] = $arg;
-                $result_added = true;
-            }
-        }
-        
-        return $result_added;
-    }
-    
     public function titleSort()
     {
         //NOTE: http://stackoverflow.com/questions/4282413/sort-array-of-objects-by-object-fields
         //NOTE: http://www.codingforums.com/php/56027-using-class-method-usort.html#post292581
-        usort($this->results, array($this, 'titleUSort'));
+        usort($this->members, array($this, 'titleUSort'));
     }
     
     private function titleUSort($a, $b)

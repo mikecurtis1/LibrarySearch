@@ -11,7 +11,7 @@ abstract class AbstractView
         $this->template_path = dirname(__FILE__) . '/../templates/' . $name . '.tpl.php';
     }
     
-    public function compose(ResultsInterface $results, HTTPRequestInterface $http_request)
+    public function compose(Results $results, HTTPRequestInterface $http_request)
     {
         $this->html_form = $this->markUpForm($http_request);
         foreach ( $results as $i => $record) {
