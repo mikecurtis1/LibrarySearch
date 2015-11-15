@@ -1,0 +1,73 @@
+body {
+	padding: 1em;
+	font-family:"Trebuchet MS", sans-serif;
+}
+
+/* 
+light blue #A3C4DE
+medium blue #3981B9
+dark blue #2B628D
+*/
+a, a:hover, a.visited {
+	color:#2B628D; 
+}
+
+h1 {
+	margin:0;
+}
+
+img.library_logo {
+	/*margin-right: 1em;*/
+}
+
+form {
+	margin: 1em;
+}
+
+form.search {
+	width:75%;
+	/*margin:50px auto;*/
+	margin: 1em;
+}
+input.search {
+	padding:0.5em;
+	background:rgba(50, 50, 50, 0.2);
+	border:0px solid #dbdbdb;
+	font-weight: normal;
+}
+input.button {
+	position:relative;
+	padding:0.4em;
+	/*left:-8px;*/
+	/*border:2px solid #207cca;*/
+	border:0;
+	background-color:#3981B9;
+	color:#fafafa;
+	/*font-size:150%;*/
+	font-weight: bold;
+}
+
+div.result {
+	border: 1px #888 solid;
+	padding: 1em;
+	margin: 0.5em 1em;
+}
+
+div.clear {
+	clear: both;
+}
+
+div.result  div.icon {
+	padding-right:1em;
+}
+
+div.result  div.metadata {}
+
+div.title {
+	font-size:150%;
+}
+
+div.lorem_ipsum{
+	margin:1em;
+	font-style:italic;
+}
