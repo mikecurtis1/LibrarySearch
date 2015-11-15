@@ -22,7 +22,7 @@ class Controller
      */
     protected function retrieveContents(ConfigInterface $config, HTTPRequestInterface $http_request)
     {
-        $content_members = new ContentMembers();
+        $content_members = SetFactory::build('ContentMembers', 'ContentMemberInterface');
         foreach ($config->getProcessProfiles() as $i => $process_profile) {
             $interpreter = $this->selectInterpreter($config, $process_profile);
             $dao = $this->selectDAO($config, $process_profile);
