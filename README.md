@@ -4,6 +4,7 @@ A mini-framework for merging library search results from multiple data
 sources
 
 LibrarySearch runs "modules" which consist of: 
+
 1. one front-end controller to process a request
 2. one view to compose and render the UI
 3. one HTML template 
@@ -11,6 +12,7 @@ LibrarySearch runs "modules" which consist of:
 Each module runs one or more "processes" consisting of four 
 components which handle data access from remote systems 
 and transformation within the framework: 
+
 1. one query interpreter
 2. one DAO (data access object)
 3. one element extractor
