@@ -25,3 +25,9 @@ into record objects.
 # Creating a Module
 
 # Creating a Process
+
+# Reference
+
+Various standards and conventions that LibrarySearch partially implements.
+
+[http://www.php-fig.org/bylaws/psr-naming-conventions/] PSR Naming Conventions
