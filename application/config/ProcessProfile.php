@@ -17,7 +17,7 @@ class ProcessProfile implements ProcessProfileInterface
     {
         if (is_string($arg)) {
             $arr = explode('.', $arg);
-            if (count($arr) === 2) {
+            if (count($arr) === 2 && is_numeric($arr[1])) {
                 return new ProcessProfile($arg, $arr[0], $arr[1]);
             } else {
                 return false;
