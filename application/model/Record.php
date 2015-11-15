@@ -32,10 +32,6 @@ class Record implements RecordInterface
     
     public function __construct()
     {
-        #$this->authors = new Set();
-        #$this->topics = new Set();
-        #$this->relations = new Set();
-        #$this->identifiers = new Set();
         $this->authors = SetFactory::build('Authors', 'AuthorizedTermInterface');
         $this->topics = SetFactory::build('Topics', 'AuthorizedTermInterface');
         $this->relations = SetFactory::build('Relations', 'AuthorizedTermInterface');
