@@ -10,6 +10,8 @@ class BuilderDemo extends AbstractBuilder implements BuilderInterface
     public function buildModel($element=null)
     {
         $this->setElement($element);
+        $this->buildMetadataSource();
+        $this->buildMetadataSourceId();
         $this->buildTitle();
         $this->buildTopics();
         $this->buildSessionKey();
