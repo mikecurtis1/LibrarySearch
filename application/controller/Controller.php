@@ -132,7 +132,7 @@ class Controller
     {
         $name_builder = $config->getProcessParam($process_profile, 'builder');
         if (class_exists($name_builder)) {
-            return new $name_builder($config, $process_profile);
+            return new $name_builder(new Record());
         } else {
             trigger_error('Builder class (' . $name_builder . ') does not exist for ' . $process_profile->getID(), E_USER_ERROR);
         }
