@@ -40,11 +40,10 @@ class Set implements SetInterface, Iterator
     public function addMember($member=null)
     {
         $member_added = false;
-        if (gettype($member) === 'object') {
-            if (in_array($this->member_implementation, class_implements($member))) {
-                $this->members[] = $member;
-                $member_added = true;
-            }
+        if ($member instanceof $this->member_implementation)
+        {
+            $this->members[] = $member;
+            $member_added = true;
         }
         
         return $member_added;
