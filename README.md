@@ -26,6 +26,10 @@ into record objects.
 
 # Creating a Process
 
+# Dependencies
+
+LibrarySearch uses [PHP-Yaz](http://php.net/manual/en/book.yaz.php) to connect to library catalogs via the z39.50 protocol.
+
 # Reference
 
 LibrarySearch partially implements the following standards and conventions: 
