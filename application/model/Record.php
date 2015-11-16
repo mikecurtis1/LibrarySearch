@@ -32,10 +32,10 @@ class Record implements RecordInterface
     
     public function __construct()
     {
-        $this->authors = SetFactory::build('Authors', 'AuthorizedTermInterface');
-        $this->topics = SetFactory::build('Topics', 'AuthorizedTermInterface');
-        $this->relations = SetFactory::build('Relations', 'AuthorizedTermInterface');
-        $this->identifiers = SetFactory::build('Identifiers', 'AuthorizedTermInterface');
+        $this->authors = SetFactory::build('Authors', 'Author');
+        $this->topics = SetFactory::build('Topics', 'Topic');
+        $this->relations = SetFactory::build('Relations', 'Relation');
+        $this->identifiers = SetFactory::build('Identifiers', 'Identifier');
     }
     
     public function setMetadataSource($arg='')
@@ -50,9 +50,7 @@ class Record implements RecordInterface
     
     public function setAuthor($arg='')
     {
-        if ( $arg instanceof Author ) {
-            $this->authors->addMember($arg);
-        }
+        $this->authors->addMember($arg);
     }
     
     public function setCreationDate($arg='')
@@ -107,23 +105,17 @@ class Record implements RecordInterface
     
     public function setIdentifier($arg='')
     {
-        if ($arg instanceof Identifier) {
-            $this->identifiers->addMember($arg);
-        }
+        $this->identifiers->addMember($arg);
     }
     
     public function setTopic($arg='')
     {
-        if ($arg instanceof Topic) {
-            $this->topics->addMember($arg);
-        }
+        $this->topics->addMember($arg);
     }
     
     public function setRelation($arg='')
     {
-        if ($arg instanceof Relation) {
-            $this->relations->addMember($arg);
-        }
+        $this->relations->addMember($arg);
     }
     
     public function setPublisher($arg='')
