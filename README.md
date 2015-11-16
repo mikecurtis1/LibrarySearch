@@ -28,7 +28,7 @@ into record objects.
 
 # Reference
 
-Various standards and conventions that LibrarySearch partially implements.
+LibrarySearch partially implements the following standards and conventions: 
 
 * [PSR Naming Conventions](http://www.php-fig.org/bylaws/psr-naming-conventions/)
 * [PSR-1: Basic Coding Standard](http://www.php-fig.org/psr/psr-1/)
