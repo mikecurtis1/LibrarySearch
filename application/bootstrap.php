@@ -5,9 +5,10 @@
  * @license http://opensource.org/licenses/GPL-3.0
  */
 
+//NOTE: turn off error reporting in production
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
-error_reporting(-1);
+error_reporting(E_ALL);
 
 // error & exception handling
 require_once dirname(__FILE__) . '/lib/ExceptionHandler.php';
